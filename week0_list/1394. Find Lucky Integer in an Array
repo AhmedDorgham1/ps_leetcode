@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int findLucky(vector<int>& arr) {
+        int count[501]={0};
+        int x=0;
+        
+        for(int n=0 ;n <arr.size();n++) {
+         x =arr[n];
+         count[x]++;
+         }
+         int lucky_num =-1;
+         for( int m =1 ;m <501 ;m++)
+         if(m==count[m])
+         lucky_num=m;
+
+        
+         return lucky_num;
+        
+    }
+    };

@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int busyStudent(vector<int>& startTime, vector<int>& endTime, int queryTime) {
+        int k = 0;
+        for (int n = 0; n < startTime.size(); n++)
+        {
+            if ((queryTime >= startTime[n]) && (queryTime <= endTime[n]))
+                k++;
+
+        }
+        return k;
+    }
+};

@@ -1,0 +1,23 @@
+string ReverseString(string & str){
+    int length = str.length();
+    for(int i=0; i< length/2;i++)
+        swap(str[i],str[length-i-1]); 
+        return str;  
+}
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        bool check = false;
+        if(x < 0 || (x % 10 == 0 && x != 0)){
+       return check;
+        }
+    string num = to_string(x);
+    string result = num;
+     ReverseString(num);
+     if(result == num){
+        check = true;
+    }
+    return check;
+
+}
+};
